@@ -1,0 +1,10 @@
+ClientID,FullName,PhoneNumber,Email,ClientType
+201,Alice Martin,0612345678,alice.martin@mail.com,Particulier
+202,Bob Durand,0623456789,bob.durand@mail.com,Entreprise
+203,Chloé Bernard,0634567890,chloe.benard@mail,Particulier
+204,David Lefèvre,0645678901,,Particulier
+205,Emma Roux,0656789012,emma.roux@mail.com,Entreprise
+206,François Morel,0667890123,francois.morelmail.com,Particulier
+207,Alice Dupont,0612345678,alice.dupont@mail.com,Particulier
+208,Bob Durand,0623456789,bob.durand@mail.com,Entreprise
+209,,0645678901,david.lefevre@mail.com,Particulier

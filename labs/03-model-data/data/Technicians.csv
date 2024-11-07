@@ -1,0 +1,8 @@
+TechnicianID,FullName,ExperienceYears,CertificationLevel,Region
+101,Jean Dupont,5,Expert,Île-de-France
+102,Marie Leclerc,3,Intermédiaire,Auvergne-Rhône-Alpes
+103,Thomas Garnier,10,Expert,Occitanie
+104,Claire Fontaine,7,Avancé,Nouvelle-Aquitaine
+105,Hugo Petit,,Intermédiaire,Hauts-de-France
+106,Laura Vincent,6,Expert,Pays de la Loire
+107,Jean Dupont,5,Expert,Île-de-France

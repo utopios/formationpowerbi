@@ -1,0 +1,9 @@
+AddressID,Street,City,PostalCode,Region
+301,10 Rue de Paris,Paris,75001,Île-de-France
+302,20 Avenue de Lyon,Lyon,69002,Auvergne Rhône-Alpes
+303,15 Boulevard Toulouse,,31000,Occitanie
+304,5 Place de Bordeaux,Bordeaux,33OOO,Nouvelle-Aquitaine
+305,25 Rue de Lille,Lille,59000,Hauts-de-France
+306,30 Avenue de Nantes,Nantes,44000,Pays de la Loire
+307,50 Boulevard Marseille,Marseille,13001,Provence-Alpes-Côte d’Azur
+308,15 Boulevard Toulouse,Toulouse,31000,Occitanie

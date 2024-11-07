@@ -1,0 +1,9 @@
+EquipmentID,EquipmentType,Model,Manufacturer,WarrantyPeriod
+401,Chaudière,Ch-1234,ThermoFrance,5 ans
+402,Radiateur,Rad-5678,ChauffrPro,3 ans
+403,Chaudière,Ch-9876,ThermoFrance,5 ans
+404,Radiateur,Rad-4321,EcoHeat,2 ans
+405,Radiateur,Rad-8765,ChaufferPro,3 ans
+406,Chaudière,CH-6543,ThermoFrance,4 ans
+407,Panneau solaire,PS-1000,SolarTech,10 ans
+408,Chaudière,Ch1234,ThermoFrance,5 ans
