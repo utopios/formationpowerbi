@@ -27,27 +27,85 @@ TotalCost = SUM(Interventions[CostTotal])
 ```
 
 - Calculez la durée moyenne des interventions.
-```
+```DAX
 AverageDuration = AVERAGE(Interventions[Duration])
 ```
 - Déterminez le nombre total d'interventions.
 
+```DAX
+TotalInterventions = COUNTROWS(Interventions)
+```
+
 #### **Étape 2 : Mesures Conditionnelles**
 - Calculez le coût moyen par type d’équipement.
+
+```DAX
+AvgCostPerEquipment = AVERAGEX(Interventions, Interventions[Cost])
+```
+
 - Créez une mesure pour filtrer et calculer le coût total des interventions n'excédant pas un certain montant.
+
+```DAX
+TotalCostFilterdByPrice = CALCULATE(SUM(Interventions[CostTotal]), Interventions[CostTotal] <= 150) 
+//Ou
+TotalCostFilterdByPrice = SUMX(FILTER(Interventions, Interventions[CostTotal] < 150), Interventions[CostTotal]) 
+```
+
 - Ajoutez une mesure conditionnelle pour analyser le coût total des interventions dans une région spécifique.
+
+```DAX
+TotalCostByRegion = CALCULATE(SUM(Interventions[Cost]), Addresses[Region] = "Hauts-de-France")
+```
 
 #### **Étape 3 : Calculs Temporels**
 - Analysez le coût total des interventions pour le mois en cours.
 - Calculez la croissance des coûts d'un mois à l'autre pour analyser les tendances.
+```
+MonthOverMonthGrowth = DIVIDE(
+      (SUM(Interventions[CostTotal]) - CALCULATE(SUM(Interventions[CostTotal]), DATEADD(Dates[Date], -1, DAY))),
+      CALCULATE(SUM(Interventions[CostTotal]), DATEADD(Dates[Date], -1, DAY))
+  )
+```
 
 #### **Étape 4 : Analyse des Performances**
 - Mesurez le nombre d’interventions effectuées par chaque technicien.
+
+```DAX
+InterventionsPerTechnician = CALCULATE(COUNTROWS(Interventions),ALLEXCEPT(Technicians,Technicians[TechnicianID]))
+```
+
 - Analysez le coût total des interventions réalisées par chaque technicien.
+
+```
+TotalCostperTechnician = 
+  CALCULATE(SUM(Interventions[CostTotal]), Technicians[TechnicianID])
+```
+
 - Identifiez les techniciens les plus performants en termes de coût moyen par intervention.
+```
+AvgCostperTechnician = 
+  DIVIDE(
+      SUM(Interventions[Cost]),
+      COUNTROWS(Interventions)
+  )
+```
 
 #### **Étape 5 : Tables Virtuelles**
 - Créez une table virtuelle pour afficher le top 5 des régions avec le coût total d’interventions le plus élevé.
+
+```
+Top 5 Regions = 
+  TOPN(
+      5,
+      SUMMARIZE(
+          Interventions,
+          Addresses[Region],
+          "TotalCost", SUM(Interventions[Cost])
+      ),
+      [TotalCost], DESC
+  )
+```
+
 - Analysez les types d’équipements les plus fréquents en termes de nombre d'interventions.
 
 #### **Étape 6 : Visualisations Interactives**
