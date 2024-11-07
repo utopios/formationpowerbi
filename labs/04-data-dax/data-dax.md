@@ -21,7 +21,15 @@ GRDF souhaite exploiter les données d'interventions pour obtenir des analyses d
 
 #### **Étape 1 : Créer des Mesures Simples**
 - Calculez le coût total des interventions.
+
+```DAX
+TotalCost = SUM(Interventions[CostTotal])
+```
+
 - Calculez la durée moyenne des interventions.
+```
+AverageDuration = AVERAGE(Interventions[Duration])
+```
 - Déterminez le nombre total d'interventions.
 
 #### **Étape 2 : Mesures Conditionnelles**
