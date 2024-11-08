@@ -113,10 +113,7 @@
 - **Publish :** Publier un rapport dans Power BI Service.
 - **Export :** Exporter un rapport dans un autre format, comme Excel ou PDF.
 
----
 
-### **20. Qu'est-ce que Power Query ?**
-**Réponse :** Power Query est un éditeur utilisé dans Power BI pour transformer et nettoyer les données avant de les charger dans un modèle.
 
 ---
 
