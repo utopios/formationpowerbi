@@ -1,0 +1,11 @@
+ID_Subvention,Type_Subvention,Montant,Conditions
+1,National,8704,Pour les équipements solaires uniquement
+2,Régional,2278,Disponible pour les maisons individuelles
+3,Européen,4945,Conditionné à l'installation avant fin de l'année
+4,National,3092,Éligible pour les installations mixtes
+5,Régional,6150,Pour les systèmes à faible consommation
+6,Européen,7465,Pour les zones rurales prioritaires
+7,National,9820,Subvention disponible uniquement sur devis
+8,Régional,2001,Pour les foyers à faibles revenus
+9,Européen,3524,Applicable aux nouvelles constructions
+10,National,5768,Pour les rénovations énergétiques majeures

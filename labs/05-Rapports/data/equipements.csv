@@ -1,0 +1,11 @@
+ID_Équipement,Type,Modèle,Fabricant,Garantie,Consommation_Énergie,Date_Installation
+1,Chaudière Écologique,Piscine,et Fils,10,146.9,2021-08-24
+2,Pompe à Chaleur,Chauffage,et Associés,1,276.1,2019-04-08
+3,Panneaux Solaires,Jardin,et Fils,4,398.5,2020-09-25
+4,Pompe à Chaleur,Neige,et Associés,6,384.4,2018-10-03
+5,Chaudière Écologique,Rouge,SAS,7,460.8,2023-02-15
+6,Chaudière Écologique,Course,SRL,8,284.9,2018-02-25
+7,Panneaux Solaires,Maison,Group,3,122.1,2020-12-01
+8,Panneaux Solaires,Ville,SAS,10,430.6,2023-03-10
+9,Chaudière Écologique,Bois,et Associés,6,104.8,2017-11-11
+10,Pompe à Chaleur,Jardin,Group,3,120.3,2019-01-28
