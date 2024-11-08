@@ -54,8 +54,20 @@ L’objectif est de modéliser les données disponibles, d’utiliser des outils
 #### **Étape 2 : Analyse des Données**
 - Identifier les zones prioritaires :
   - Analyse régionale : performances écologiques et économiques par région.
+  - Mesure Dax
+```DAX
+ReductionTotalCo2 = SUM(Interventions[Reduction_CO2])
+CoutTotalInterventions = SUM(Interventions[Coût_Total])
+CoutInterventionsSubventionnées = CALCULATE([CoutTotalInterventions], NOT(ISBLANK(Interventions[ID_Subvention])))
+```
   - Analyse des équipements : types d’équipements les plus efficaces.
+  ```DAX
+  CoutMoyen = AVERAGEX(RELATEDTABLE(Interventions), Interventions[Coût_Total])
+  ```
   - Analyse des techniciens : techniciens les plus performants en termes de réduction des émissions.
+  ```DAX
+   InterventionsParTechnicien = COUNTROWS(Filter(Interventions, Interventions[ID_Technicien] = Techniciens[ID_Technicien]))
+  ```
 - Mettre en place des indicateurs pour :
   - Mesurer l’évolution des installations écologiques.
   - Comparer les coûts des interventions préventives et correctives.
